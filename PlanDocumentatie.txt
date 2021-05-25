@@ -1,0 +1,71 @@
+I. Introducere
+a) Descrierea problemei
+b) Cum decurg acum lucrurile
+c) Stocks vs Crypto
+d) Motivatia din spatele lucrarii
+II. Abordarea lucrarii
+a) Indicatori statistici folositi: RSI, SMA, EMA, MACD
+b) Statistica vs Machine Learning
+III. Implementarea aplicatiei
+a) Arhitectura
+b) Implementarea indicatorilor
+c) Algoritmul statistic
+d) LSTM
+e) Retea bazata pe indicatori
+IV. Alte abordari
+a) ARIMA
+b) XGBoost
+V. Rezultate / Experimente
+VI. Concluzii
+a) Concluzii in urma implementarii licentei
+b) Alte lucruri ce ar putea fi adaugate / Munca viitoare
+
+Intrebari:
+Ce experimente ar merita rulate:
+1) Perioada 2018 - 2019 - scaderi
+2) Perioada 2019 - 2020 - retracement
+3) Perioada 2020 - 2021 - cresteri
+4) Perioada 2021 - prezent? - sideways
+
+Probabilitati si statistica
+Structuri de date
+Proiectarea algoritmilor
+Ingineria programarii
+
+
+
+
+
+
+
+
+
+
+
+
+Titlu, autor
+Cuprins
+State-of-the-art
+- Concepte de baza
+- Ce au facut altii
+- Aplicatii existente
+Abordarea proprie
+- Arhitectura
+- Module
+- Experimente
+- Studii de caz
+- Evaluare
+- Filmulet Demo
+Concluzii
+Munca viitoare
+Activitate de cercetare
+
+
+
+Sa incerc sa dau indicatorii ca input
+Sau sa ii bag la decizie ca sa calculez un risc
+
+risc sa ia considerarea volatilitatea la market
+
+crypto vs stocks
+de luat date de mana la stocks
