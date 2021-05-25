@@ -88,21 +88,29 @@ class GUI(Frame):
 
             bot.get_status(end_date)
 
-            show_plot(bot)
+            show_plot(bot, start_date, end_date)
 
         self.submitButton = Button(master, text="Submit", command=button_click)
         self.submitButton.grid()
 
 
-def show_plot(bot):
-    # predicted_prices_in_future = bot.predict_prices_in_future(start_date)
-
-    # end_dateeee = date(2021, 5, 10)
-
-    # real_prices_in_future = get_list_of_prices_for_given_interval('BTC-USD', start_date, end_dateeee)
+def show_plot(bot, start_date, end_date):
+    real_prices_in_future = get_list_of_prices_for_given_interval(TICKER, start_date, end_date)
 
     # plt.plot(predicted_prices_in_future, color="blue")
-    # plt.plot(real_prices_in_future, color="red")
+    plt.plot(real_prices_in_future, color="blue")
 
-    # plt.show()
+    for buy in bot.buys:
+        x_axis = buy[0]
+        y_axis = real_prices_in_future[(x_axis - start_date).days]
+
+        plt.plot([(x_axis - start_date).days], [y_axis], color='green', marker='o', markersize=4)
+
+    for sell in bot.sells:
+        x_axis = sell[0]
+        y_axis = real_prices_in_future[(x_axis - start_date).days]
+
+        plt.plot((x_axis - start_date).days, y_axis, color='red', marker='o', markersize=4)
+
+    plt.show()
     pass

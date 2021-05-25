@@ -3,8 +3,8 @@ from datetime import date
 # General
 crypto_tickers = ['BTC-USD', 'ETH-USD', 'XRP-USD']
 stock_tickers = ['TSLA', 'AAPL', 'MSFT', 'GOOGL']
-TICKER = stock_tickers[0]
-# TICKER = crypto_tickers[2]
+# TICKER = stock_tickers[0]
+TICKER = crypto_tickers[1]
 RISK = None  # TODO
 
 # Statistical

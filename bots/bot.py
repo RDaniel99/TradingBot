@@ -45,13 +45,15 @@ class Bot:
 
     def buy(self, current_date, percentage):
         to_buy_cash = self.api.get_percentage_of_curr_cash(percentage)
-        self.api.buy(self.ticker, current_date, to_buy_cash)
-        self.buys.append([current_date, to_buy_cash])
+        result = self.api.buy(self.ticker, current_date, to_buy_cash)
+        if result:
+            self.buys.append([current_date, to_buy_cash])
 
     def sell(self, current_date, percentage):
         to_sell_units = self.api.get_percentage_of_units(self.ticker, percentage)
-        self.api.sell(self.ticker, current_date, to_sell_units)
-        self.sells.append([current_date, to_sell_units])
+        result = self.api.sell(self.ticker, current_date, to_sell_units)
+        if result:
+            self.sells.append([current_date, to_sell_units])
 
     def get_status(self, yesterday=None):
         self.api.get_status(yesterday)

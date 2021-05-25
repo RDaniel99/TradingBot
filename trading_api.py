@@ -84,10 +84,13 @@ class TradingAPI:
 
             return False
 
+        if units < 0.0000001:
+            return False
+
         if units == MAX_POSSIBLE:
             units = self.wallet[ticker]
 
-        if self.wallet[ticker] < units:
+        if units - self.wallet[ticker] > 0.0001:
             if logs:
                 print(f'Not enough units to sell')
 
